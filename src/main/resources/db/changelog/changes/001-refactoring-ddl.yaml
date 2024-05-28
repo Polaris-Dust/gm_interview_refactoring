@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5b80fa1a-9787-4015-b5c4-af4525e66a8f
+      author: gm
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: person_pkey
+                  name: uuid
+                  type: VARCHAR(255)
+            tableName: person
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: product_pkey
+                  name: uuid
+                  type: VARCHAR(255)
+              - column:
+                  name: code
+                  type: VARCHAR(6)
+            tableName: product
+        - createTable:
+            columns:
+              - column:
+                  name: person_uuid
+                  type: VARCHAR(255)
+                  constraints:
+                    foreignKeyName: person_fkey
+                    references: person(uuid)
+              - column:
+                  name: product_uuid
+                  type: VARCHAR(255)
+                  constraints:
+                    foreignKeyName: product_fkey
+                    references: product(uuid)
+            tableName: person_products

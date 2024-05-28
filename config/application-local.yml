@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    password:
+    username: sa
+    url: jdbc:h2:./db/local;NON_KEYWORDS=KEY,VALUE;AUTO_SERVER=TRUE;AUTO_SERVER_PORT=3333;USER=sa
+  devtools:
+    add-properties: true
+    restart:
+      enabled: true

@@ -1,0 +1,19 @@
+server:
+  port: 4444
+  servlet:
+    context-path: /interview
+  ssl:
+    enabled: false
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://db.example.org:1234/VENTE?currentSchema=interview
+    username: vente_interview
+    password: changeme
+  application:
+    name: "@name@"
+  jpa:
+    open-in-view: false
+  mvc:
+    log-resolved-exception: true

@@ -1,0 +1,17 @@
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{yyyy.MM.dd HH:mm:ss.SSS} | [%thread] | %-5level | %logger{0} | %X{ip:-&lt;noip&gt;} | %X{user:-&lt;nouser&gt;} | %X{messageId:-&lt;nomessageId&gt;}
+        | CORRELATION_ID=%X{cor_id:-&lt;nocor_id&gt;} | %msg%n
+      </pattern>
+    </encoder>
+  </appender>
+
+  <root level="WARN">
+    <appender-ref ref="STDOUT"/>
+  </root>
+
+  <logger name="ch.gma.vente.interview.refactoring" level="DEBUG"/>
+
+</configuration>

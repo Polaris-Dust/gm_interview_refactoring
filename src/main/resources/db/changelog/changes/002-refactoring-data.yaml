@@ -1,0 +1,65 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0486cc0d-8be8-43ef-98e9-a6bbcdd8bc64
+      author: gm
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: uuid
+                  value: 1d7bf398-8e46-44d3-8e83-154182e03dba
+            tableName: person
+        - insert:
+            columns:
+              - column:
+                  name: uuid
+                  value: cb4658aa-d2a0-4827-b7c1-f417bed8a922
+              - column:
+                  name: code
+                  value: AHGM03
+            tableName: product
+        - insert:
+            columns:
+              - column:
+                  name: uuid
+                  value: bb4a4929-6b43-4183-bddf-746f7d4ba927
+              - column:
+                  name: code
+                  value: MUGA01
+            tableName: product
+        - insert:
+            columns:
+              - column:
+                  name: uuid
+                  value: ef556674-c33a-4dc9-bdc0-3873c14647ae
+              - column:
+                  name: code
+                  value: PCGM02
+            tableName: product
+        - insert:
+            columns:
+              - column:
+                  name: person_uuid
+                  value: 1d7bf398-8e46-44d3-8e83-154182e03dba
+              - column:
+                  name: product_uuid
+                  value: cb4658aa-d2a0-4827-b7c1-f417bed8a922
+            tableName: person_products
+        - insert:
+            columns:
+              - column:
+                  name: person_uuid
+                  value: 1d7bf398-8e46-44d3-8e83-154182e03dba
+              - column:
+                  name: product_uuid
+                  value: bb4a4929-6b43-4183-bddf-746f7d4ba927
+            tableName: person_products
+        - insert:
+            columns:
+              - column:
+                  name: person_uuid
+                  value: 1d7bf398-8e46-44d3-8e83-154182e03dba
+              - column:
+                  name: product_uuid
+                  value: ef556674-c33a-4dc9-bdc0-3873c14647ae
+            tableName: person_products
