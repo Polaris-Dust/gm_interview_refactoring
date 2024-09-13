@@ -3,13 +3,13 @@ package ch.gma.vente.interview.refactoring.services.website;
 import ch.gma.vente.interview.refactoring.models.website.PersonSO;
 import ch.gma.vente.interview.refactoring.models.website.ProductTarifSO;
 import ch.gma.vente.interview.refactoring.utils.DateUtils;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
 import org.springframework.stereotype.Service;
 
-@Slf4j
 @Service
 public class WebsiteWorkerHelper {
 
+  private static final Logger log = org.slf4j.LoggerFactory.getLogger(WebsiteWorkerHelper.class);
   private final DateUtils dateUtils;
 
   public WebsiteWorkerHelper(DateUtils dateUtils) {

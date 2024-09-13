@@ -12,16 +12,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import java.io.IOException;
 import java.util.Optional;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.slf4j.Logger;
 
 @RunWith(MockitoJUnitRunner.class)
-@Slf4j
 public class WebsiteWorkerHelperTest {
 
+  private static final Logger log = org.slf4j.LoggerFactory.getLogger(WebsiteWorkerHelperTest.class);
   private DateUtils dateUtils = new DateUtils(null);
   private WebsiteWorkerHelper websiteWorkerHelper = new WebsiteWorkerHelper(dateUtils);
 
