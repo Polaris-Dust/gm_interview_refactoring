@@ -1,10 +1,12 @@
 # Getting Started
 
+## Warning
+
+You should consider that this API is used by clients and should not be modified without notice.
+
 ## Exercise
 
-* Launch the application
 * Launch the tests
 * Fix the tests
 * Clean the application
-* Play with the API
 * Analyze and discuss pending issues
